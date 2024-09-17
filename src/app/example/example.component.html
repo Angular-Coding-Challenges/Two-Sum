@@ -1,0 +1,42 @@
+<div class="two-sum-container">
+    <h2>Two Sum Problem</h2>
+  
+    <form (submit)="onSubmit(); $event.preventDefault()">
+      <div>
+        <label for="nums">Enter Numbers (comma separated):</label>
+        <input
+          id="nums"
+          type="text"
+          [(ngModel)]="nums"
+          name="nums"
+          placeholder="e.g. 1, 2, 3, 4"
+          required
+        />
+      </div>
+  
+      <div>
+        <label for="target">Enter Target:</label>
+        <input
+          id="target"
+          type="number"
+          [(ngModel)]="target"
+          name="target"
+          required
+        />
+      </div>
+  
+      <button type="submit">Find Two Sum</button>
+    </form>
+  
+    <div class="result">
+      <h3>Result:</h3>
+      <p *ngIf="isResultArray()">
+        The indices of the two numbers that sum to {{ target }} are:
+        <strong>{{ result[0] }} and {{ result[1] }}</strong>.
+      </p>
+      <p *ngIf="!isResultArray()">
+        {{ result }}
+      </p>
+    </div>
+  </div>
+  

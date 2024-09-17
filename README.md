@@ -1,27 +1,49 @@
-# TwoSum
+# Two Sum Problem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+## **Problem Description**
 
-## Development server
+Given an array of integers `nums` and an integer `target`, your task is to return the **indices** of the two numbers in the array such that they add up to the target value.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- You may assume that each input will have **exactly one solution**.
+- You **may not** use the same element twice.
+- The solution can be returned in any order.
 
-## Code scaffolding
+## **Examples**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### **Example 1:**
 
-## Build
+```plaintext
+Input: nums = [2, 7, 11, 15], target = 9
+Output: [0, 1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### **Example 2:**
 
-## Running unit tests
+```plaintext
+Input: nums = [3, 2, 4], target = 6
+Output: [1, 2]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### **Example 3:**
 
-## Running end-to-end tests
+```plaintext
+Input: nums = [3, 3], target = 6
+Output: [0, 1]
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## **Constraints:**
 
-## Further help
+- The number of elements in the array is between **2 and 10^4**.
+- Each element in the array `nums[i]` is an integer where:
+  - \( -10^9 \leq nums[i] \leq 10^9 \)
+- The `target` is an integer where:
+  - \( -10^9 \leq target \leq 10^9 \)
+- **Only one valid answer exists.**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## **Follow-Up Question:**
+
+Can you come up with an algorithm that runs in **less than O(n²)** time complexity?
+
+---
+

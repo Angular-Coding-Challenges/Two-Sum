@@ -1,0 +1,56 @@
+<h3>Approach:</h3>
+<p>
+  To solve the problem efficiently, we use a <strong>hash map (or dictionary)</strong> to store
+  numbers and their indices. The hash map allows us to find the complement of each number (i.e.,
+  <code>target - current number</code>) in constant time, thereby reducing the time complexity to
+  <strong>O(n)</strong>.
+</p>
+
+<h3>Algorithm Steps:</h3>
+<ol>
+  <li>Create an empty hash map to store numbers and their indices.</li>
+  <li>
+    Loop through the array <code>nums</code>:
+    <ul>
+      <li>For each number, calculate its complement as <code>target - current number</code>.</li>
+      <li>
+        If the complement exists in the hash map, return the indices of the complement and the
+        current number.
+      </li>
+      <li>Otherwise, add the current number and its index to the hash map.</li>
+    </ul>
+  </li>
+  <li>
+    If no solution is found by the end of the loop (though the problem guarantees one solution),
+    return an empty array (this step won’t actually occur due to the constraints).
+  </li>
+</ol>
+
+<h3>Time Complexity:</h3>
+<ul>
+  <li><strong>O(n)</strong>: We only traverse the array once, and each lookup or insertion in the hash map takes constant time.</li>
+</ul>
+
+<h3>Space Complexity:</h3>
+<ul>
+  <li><strong>O(n)</strong>: We store up to <code>n</code> elements in the hash map, where <code>n</code> is the length of the input array <code>nums</code>.</li>
+</ul>
+
+<hr />
+
+<h3>Follow-Up Solution:</h3>
+<p>
+  The solution provided runs in <strong>O(n)</strong> time complexity and is more efficient than the brute-force approach, which would involve checking all pairs of numbers and would have <strong>O(n²)</strong> time complexity.
+</p>
+<p>
+  By using a hash map, we reduce the time it takes to find the complement of each number from linear time (in a brute-force approach) to constant time, allowing the entire algorithm to run in a single pass over the array.
+</p>
+
+<hr />
+
+<h3>Conclusion:</h3>
+<p>
+  The Two Sum problem is a great example of how hash maps can be used to optimize search problems. The provided solution runs efficiently with <strong>O(n)</strong> time complexity, making it scalable for large input sizes.
+</p>
+
+<strong>For more information, refer to the <a href="https://github.com/Angular-Coding-Challenges/two-sum/blob/main/two-sum/src/app/challenge/README.md" target="_blank">README.md</a> file.</strong>
